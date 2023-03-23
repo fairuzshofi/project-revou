@@ -1,0 +1,134 @@
+body {
+    font-family: "century gothic", calibri;
+    color: rgb(219, 216, 211);
+    box-sizing: border-box;
+}
+
+.display {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.kalkulator-pg, .kalkulator-hsl {
+    background-color: rgb(169, 164, 189);
+    box-shadow: 10px 10px 5px rgb(48, 42, 47);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    flex: 1 1 400px;
+    width: 200px;
+}
+
+
+.card {
+    background-color: rgb(201, 216, 217);
+    padding: 1em 2em;
+    margin: 4px 10px;
+    border-radius: 10px;
+    color: rgb(79, 76, 76);
+}
+
+h2, h3 {
+    font-weight: 500;
+}
+
+.form-group-jk {
+    padding-bottom: 10px;
+}
+
+.radio-jk {
+    padding-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 90%;
+    display: inline-flex;
+}
+
+.icon-input {
+    margin: 10px;
+}
+
+i {
+    width: 3%;
+    padding-left: 10px;
+}
+
+.button-group {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+button{
+    border-radius: 3px;
+    border-color: rgb(133, 136, 138);
+}
+
+#hitung {
+    background-color: rgb(151, 181, 227);
+    color: aliceblue;
+    margin-right: 5px;
+}
+
+#download-hasil, #konsultasi, #registrasi {
+    background-color: rgb(151, 181, 227);
+    color: aliceblue;
+    margin-right: 5px;
+    padding: 5px 10px;
+}
+
+.download-hasil-kal, .penyakit-dari-hasil {
+    text-align: center;
+}
+
+#hitung:hover, #download-hasil:hover, #konsultasi:hover, #registrasi:hover {
+    background-color: rgb(252, 255, 255);
+    color:  rgb(99, 185, 232);
+    cursor: pointer;
+}
+
+#reset:hover {
+    cursor: pointer;
+}
+
+#hasil-text, #hasil-berat, #desk-berat {
+    text-align: center;
+}
+
+.caution {
+    animation: myfirst 1s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+}
+
+@keyframes myfirst
+{
+0% {border: 1px solid red;background: rgb(135, 135, 101);}
+25% {border: 1px solid rgb(251, 255, 0); background: rgb(96, 95, 95)}
+75% {border: 1px solid rgb(255, 242, 0); background: rgb(94, 93, 93)}
+100% {border: 1px solid red; background: rgb(134, 132, 112)}
+}
+
+.footer, .deskripsi-hasil {
+    text-align: left;
+    padding-left: 10px;
+}
+
+#app:hover {
+    cursor: pointer;
+}
+
+#app {
+    size: 100px;
+    margin-top: 2px;
+}
