@@ -91,6 +91,7 @@ button{
     text-align: center;
 }
 
+/*merubah warna button dan bentuk cursor ketika cursor berada diatasnya*/
 #hitung:hover, #download-hasil:hover, #konsultasi:hover, #registrasi:hover {
     background-color: rgb(252, 255, 255);
     color:  rgb(99, 185, 232);
@@ -105,6 +106,7 @@ button{
     text-align: center;
 }
 
+/*kasih animasi ganti warna border tiap 1 detik */
 .caution {
     animation: myfirst 1s;
     animation-iteration-count: infinite;

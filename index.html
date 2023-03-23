@@ -54,6 +54,7 @@
                     </div>
 
                     <div class="button-group">
+                        <!--ketika tombol ditekan akan menjalankan function submitForm. return false untuk mencegah page merefresh sendiri (pahamku begitu)-->
                         <button id="hitung" type="submit" class="button" onclick="submitForm(); return false">Hitung BMI</button>
                         <button id="reset" class="reset">Reset</button>
                     </div>
@@ -125,7 +126,7 @@
             </div>
 
             <div class="download-app">
-                <!--import foto logo download-->
+                <!--import logo download dari store-->
                 <h6 style="margin: 0;">Download Here</h6>
                 <i class="fab fa-google-play" id="app" onclick="playstore()"></i>
                 <i class="fa-brands fa-app-store" id="app" onclick="appstore()"></i>

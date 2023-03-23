@@ -1,13 +1,14 @@
 function submitForm(){
-
+    /*mengambil value dari form ke dalam variable*/
     var jenisKelamin = document.getElementById("jenis-kelamin1").value;
     var beratBadan = document.getElementById("berat-badan1").value;
     var usia = document.getElementById("usia1").value;
     var tinggiBadan = document.getElementById("tinggi-badan1").value;
 
+    /*rumus hitung BMI. parseint untuk merubah variable menjadi tipe data integer*/
     var hasilIdeal = parseInt(beratBadan) / ((parseInt(tinggiBadan)/100) ** 2); 
 
-    if (hasilIdeal.toFixed(1) < 18.5){
+    if (hasilIdeal.toFixed(1) < 18.5){ /*code yang akan dijalankan ketika hasil kalkulasi dibawah 18.5. tofixed(1) untuk membulatkan desimal menjadi 1 angka dibelakang koma */
         document.getElementById("hasil-text").innerHTML = "Berat Badan Kurang";
         document.getElementById("hasil-berat").innerHTML = hasilIdeal.toFixed(1);
         document.getElementById("desk-berat").innerHTML = "Anda Memiliki Berat Badan yang Kurang";
@@ -24,7 +25,7 @@ function submitForm(){
         document.getElementById("penyakit3").innerHTML = "Penyakit Jantung";
         document.getElementById("penyakit4").innerHTML = "Tekanan Darah Tinggi";
 
-    } else if (hasilIdeal.toFixed(1) >= 18.5 && hasilIdeal.toFixed(1) <= 24.9){
+    } else if (hasilIdeal.toFixed(1) >= 18.5 && hasilIdeal.toFixed(1) <= 24.9){ /*code yang akan dijalankan jika hasil kalkulasi antara 18.5 dan 24.9 */
         document.getElementById("hasil-text").innerHTML = "Berat Badan Ideal";
         document.getElementById("hasil-berat").innerHTML = hasilIdeal.toFixed(1);
         document.getElementById("desk-berat").innerHTML = "Anda Memiliki Berat Badan yang Ideal";
@@ -35,7 +36,7 @@ function submitForm(){
         document.getElementById("desk-hasil1").innerHTML = "Hasil perhitungan ini menunjukkan kategori ideal yang berarti berat badan Anda seimbang dengan tinggi badan Anda.";
         document.getElementById("desk-hasil2").innerHTML = "ini adalah kategori yang diinginkan untuk kesehatan yang baik. Namun, tetap perlu menjaga pola makan dan gaya hidup yang sehat untuk menjaga berat badan tetap stabil.";
 
-    } else if (hasilIdeal.toFixed(1) >= 25.0 && hasilIdeal.toFixed(1) <= 29.9){
+    } else if (hasilIdeal.toFixed(1) >= 25.0 && hasilIdeal.toFixed(1) <= 29.9){ /*code yang akan dijalankan jika hasil kalkulasi antara 25 dan 29.9 */
         document.getElementById("hasil-text").innerHTML = "Berat Badan Lebih";
         document.getElementById("hasil-berat").innerHTML = hasilIdeal.toFixed(1);
         document.getElementById("desk-berat").innerHTML = "Anda Memiliki Berat Badan yang Berlebih";
@@ -52,7 +53,7 @@ function submitForm(){
         document.getElementById("penyakit3").innerHTML = "Sakit Jantung";
         document.getElementById("penyakit4").innerHTML = "Osteoarthritis";
 
-    } else if (hasilIdeal.toFixed(1) >= 30){
+    } else if (hasilIdeal.toFixed(1) >= 30){ /*code yang akan dijalankan jika hasil kalkulasi lebih dari 30 */
         document.getElementById("hasil-text").innerHTML = "Berat Badan Obesitas";
         document.getElementById("hasil-berat").innerHTML = hasilIdeal.toFixed(1);
         document.getElementById("desk-berat").innerHTML = "Anda Memiliki Berat Badan yang Obesitas";
@@ -69,8 +70,7 @@ function submitForm(){
         document.getElementById("penyakit3").innerHTML = "Diabetes";
         document.getElementById("penyakit4").innerHTML = "Osteoarthritis";
 
-
-    } else {
+    } else { /*code yang akan dijalankan jika hasil tidak ditemukan. atau dengan kata lain pengisian form kurang atau tidak benar */
         alert("Mohon isi data dengan lengkap & benar.")
     }
 
@@ -82,7 +82,7 @@ function downloadHasil(){
     var usia = document.getElementById("usia1").value;
     var tinggiBadan = document.getElementById("tinggi-badan1").value;
 
-    if (beratBadan == 0 || usia == 0 || tinggiBadan == 0){
+    if (beratBadan == 0 || usia == 0 || tinggiBadan == 0){ /*code untuk tombol download ketika ditekan namun data yang dimasukkan belum lengkap */
         alert("Silakan isi data terlebih dahulu.");
     } else {
         alert("Hasil sedang didownload.");
